@@ -3,42 +3,131 @@
   <head>
     <meta charset="utf-8">
     <title>My First Bitstarter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%Fbootstrap-combined.no-icons.min.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
+    <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css">
+    <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fjquery.js"></script>
+    <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap.js"></script>
+    <link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800" rel="stylesheet" type="text/css">
+
+
+
     <link type="text/css" rel="stylesheet"
 	  href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-2.3.2.css">
+
     <style type="text/css">
-      body {
-        padding-top: 20px;
-        padding-botom: 40px;
+      /* Large desktop*/
+      @media (min-width: 980px) {
+        body {
+         padding-top: 60px;
       }
-      .container{
-        width: 960px;
+      .linediv-l {
+        border-right: 1px white solid;
       }
-      p.lead{
-        padding-top: 15px;
+      .linediv-r {
+        border-left: 1px white solid;
       }
-      .navigation, .pitch, .section1, .section2, .faq, .footer{
-        padding: 10px 0px 10px 0px;
+     }
+
+     /* Landscape phones and down */
+      @media (max-width: 480px) {
+       .copy {
+         padding: 2.5% 10%;
       }
-      .video, .thermometer, .order, .social{
-        border: 1px dotted;
+      .linediv-l {
+        border-bottom: 1px white solid;
+      }
+      .linediv-r {
+        border-top: 1px white solid;
+      }
+     }
+
+      /* All form factors */
+
+      /* Main body and headings */
+      body{
+        font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+      }
+      .heading, .subheading {
+        font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
         text-align: center;
       }
-      .video {
-       /* Internal borders have 1px width, thus need to add 4 x 1px to 120px. */
-       height: 124px;
-       line-height: 124px;
+      p.lead {
+        padding-top: 1.5%;
+        font-size: 24;
+        line-height: 30px;
       }
-      .thermometer, .order, .social {
-      /* line-height to vertically center: http://phrogz.net/css/vertical-align/index.html */
-        height: 40px;
-        line-height: 40px;
+      p {
+        font-size: 18px;
+        line-height: 24px;
       }
-      div.row {
-        border: 1px solid;
+
+      /* Video pitch and Action */
+      .pitch {
+        padding: 2.5% 0%;
+      }
+      .order {
+        padding: 2% 0%;
+      }
+      .actions {
+        background-color: #343434;
+        padding: 3% 0%;
+      }
+      .video, .thermometer, .order, .social, .statistics {
+        text-align: center;
+      }
+      .statistics h3, .statistics p {
+        color: white;
+      }
+
+      /* Marketing Copy and Footer */
+      .copy {
+        padding-top: 2.5%;
+        padding-bottom: 2.5;
+        text-align: justify;
+      }
+      .asset {
+        padding: 2.5% 0%;
+      }
+      .footer {
+        color: #cccccc;
+        text-align: center;
+      }
+      .footer p {
+        font-size: 11px;
+      }
+      .footer a {
+        color: #ccccff;
       }
      </style>
     </head>
   <body>
+
+    <!-- Mobile-friendly navbar adapted from example. -->
+    <!-- http://twitter.github.io/bootstrap/examples/starter-template.html -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+	<div class="container">
+	  <button type="button" class="btn btn-navbar"
+		  data-toggle="collapse" data-target=".nav-collapse">
+	    <span class="icon-bar"></span>
+	    <span class="icon-bar"></span>
+	    <span class="icon-bar"></span>
+	  </button>
+	  <a class="brand" href="#">Bitstarter</a>
+	  <div class="nav-collapse collapse">
+	    <ul class="nav">
+	      <li class="active"><a href="#">Home</a></li>
+	      <li><a href="#about">About</a></li>
+	      <li><a href="#contact">Contact</a></li>
+	    </ul>
+	   </div><!--/ .nav-collapse -->
+	  </div>
+	</div>
+      </div>
+
     <div class="container">
       <div class="row navigation">
 	<div class="span2 logo">
