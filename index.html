@@ -48,10 +48,10 @@
 
       /* Main body and headings */
       body{
-        font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+        font-family:'Open Sans', Helvetica, Arial, sans-serif;
       }
       .heading, .subheading {
-        font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+        font-family:'Ubuntu', Helvetica, Arial, sans-serif;
         text-align: center;
       }
       p.lead {
@@ -128,36 +128,62 @@
 	</div>
       </div>
 
-    <div class="container">
-      <div class="row navigation">
-	<div class="span2 logo">
-	  Logo
+     <!-- We use row-fluid inside containers to achieve a resizable layout. -->
+     <!-- blogs.endjin.com/2013/04/tips-for-implementing-responsive-designs-using-bootstrap/ -->
+     <!-- http://stackoverflow.com/a/12270322 -->
+     <div class ="container">
+       <!-- Font and paired font of .heading/.subheading and body from Google Fonts -->
+       <!-- ww.google.com/fonts/specimen/Ubuntu -->
+       <!-- ww.google.com/fonts/specimen/Ubuntu#pairings -->
+       <div class="row-fluid heading">
+	 <div class="span12">
+	   <h1>Product</h1>
+	 </div>
 	</div>
-	<div class="span6 blank">
-	  Blank
-	</div>
-	<div class="span4 about">
-	  About
-	</div>
-      </div>
-      <div class="row heading">
-	<div class="span12">
-	  <h1>Bitstarter Title</h1>
-	</div>
-      </div>
-     <div class="row subheading">
-       <div class="span12">
-	 <p class="lead">This is my first bitsarter project.</p>
-       </div>
-      </div>
-      <div class="row pitch">
-	<div class="span6 video">
-	  Video
-	</div>
-	<div class="span6">
-	  <div class="thermometer">
-	    Thermometer
+        <div class="row-fluid subheading">
+	  <div class="span12">
+	    <!-- Special typography from Bootstrap for lead paragraph. -->
+	    <!-- http://twotter.github.io/bootstrap/base-css.html#typography -->
+	    <p class="lead">One sentence description.</p>
+	   </div>
 	  </div>
+	<div class="row-fluid pitch">
+	  <div class="span5 offset1 video">
+	    <img class="img-polaroid" src="http://placehold.it/480x300">
+	  </div>
+
+	  <!-- We define a new 'actions' div to contain statistics, order, and share buttons.-->
+	  <div class="span5 actions">
+	    <div class="span8 offset2">
+	      <div class="statistics">
+		<div class="span4">
+		  <!-- linediv-l and linediv-r give dividing lines that look different in horizontal and vertical layouts, illustrating media queries. -->
+		  <div class="linediv-l">
+		    <h3>1000</h3> <p>backers</p>
+		    </div>
+		  </div>
+		  <div class="span4">
+		    <div class="linediv-c">
+		      <h3>$6000</h3> <p>of $10,000</p>
+		    </div>
+		   </div>
+		   <div class="span4">
+		     <div class="linediv-r">
+		     <h3>10</h3> <p>days left</p>
+		     </div>
+		    </div>
+		   </div>
+	          </div>
+	          <div class="span10 offset1">
+		    <!-- Bootstrap progress bar -->
+		    <!-- http://twitter.github.io/bootstrap/components.html#prgress -->
+		    <div class="thermometer progress active">
+		      <div class="bar bar-success" style="width: 60%;"></div>
+		      <div class="bar bar-warning" style="width: 40%;"></div>
+		    </div>
+		   </div>
+
+	 
 	  <div class="order">
 	    Order
 	  </div>
