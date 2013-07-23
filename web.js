@@ -2,6 +2,8 @@ var express = require('express');
 
 var app = express.createServer(express.logger());
 
+app.use(express.static(process.env.PWD + '/'));
+
 app.get('/', function(request, response) {
   var fs = require("fs");
   var buffer = new Buffer(fs.readFileSync("index.html"));
@@ -9,7 +11,7 @@ app.get('/', function(request, response) {
   response.send(indexStr);
 });
 
-var port = process.env.PORT || 5000;
+var port = process.env.PORT || 8080;
 app.listen(port, function() {
   console.log("Listening on " + port);
 });
